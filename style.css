@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section, div {
+    border: 3px solid black;
+
+}
+section{
+    height: 70px;
+    width: auto;
+
+}
+span{
+    font-size: 45px;
+}
+
+.grid{
+    width: 500px;
+    height: 500px;
+}
+.btnContainer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+
+.sizeSelectorContainer{
+    height: 50px;
+}
+button {
+    width: 25%;
+}
