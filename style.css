@@ -5,9 +5,12 @@ body{
     align-items: center;
 }
 
-section, div {
+header, footer, div {
     border: 3px solid black;
 
+}
+header{
+    margin-top: 20px;
 }
 section{
     height: 70px;
@@ -21,6 +24,7 @@ span{
 .grid{
     width: 500px;
     height: 500px;
+    display: grid;
 }
 .btnContainer {
     display: flex;
@@ -34,3 +38,4 @@ span{
 button {
     width: 25%;
 }
+

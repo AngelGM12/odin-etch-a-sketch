@@ -1,0 +1,55 @@
+let color="black"
+   
+function fillgrid(size) {
+    let grid = document.querySelector(".grid");
+    let squares = grid.querySelectorAll("div");
+    squares.forEach((div) => div.remove());
+
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let amount = size * size;
+
+    for(let i = 0; i<amount; i++){
+        let square = document.createElement("div");
+        square.addEventListener("mouseover", colorSquare);
+        square.style.backgroundColor = "white";
+        grid.insertAdjacentElement("beforeend", square);
+
+
+    }
+}
+
+fillgrid(16);
+
+function changeSize(input) {
+    
+    if(input>=2 && input<=100){
+        fillgrid(input);
+    }
+    else{
+        console.log("wrong number")
+    }
+    
+}
+
+function colorSquare() {
+    if(color === 'random'){
+        this.style.backgroundColor =  `hsl(${Math.random()*360}, 100%, 50%)`;
+    }
+    else{
+        this.style.backgroundColor =  color;
+    }
+   
+}
+
+function changeColor(choice) {
+    color = choice;
+
+}
+
+function reset(){
+    let grid = document.querySelector(".grid");
+    let squares = grid.querySelectorAll("div");
+    squares.forEach((div) => div.style.backgroundColor = "white");
+}
