@@ -3,14 +3,17 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color:lavender;
+    
 }
-
-header, footer, div {
+/*
+header, footer, div{
     border: 3px solid black;
 
 }
+*/
 header{
-    margin-top: 20px;
+    margin-top: 5px;
 }
 section{
     height: 70px;
@@ -25,17 +28,53 @@ span{
     width: 500px;
     height: 500px;
     display: grid;
+    border: 2px solid black;
 }
 .btnContainer {
     display: flex;
     justify-content: space-evenly;
     gap: 8px;
+    margin-top: 20px;
+    width: 500px;
 }
 
 .sizeSelectorContainer{
-    height: 50px;
+    /*height: 50px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0px;
+    width: 500px;
 }
 button {
     width: 25%;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: lightgray;
 }
 
+#btnRgb {
+    background:linear-gradient(45deg,Blue, Indigo,violet, Red, Orange, Yellow, Green );
+    
+    
+}
+input {
+    border-radius: 8px;
+}
+#gridContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@media screen and (max-width: 500px ){
+    #gridContainer {
+        width: 100%;
+    }
+    .sizeSelectorContainer{
+        width: 100%;
+    }
+}
